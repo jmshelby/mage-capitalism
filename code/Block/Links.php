@@ -5,10 +5,7 @@ class Aduroware_Capitalism_Block_Links extends Mage_Page_Block_Template_Links_Bl
 
     protected function _toHtml()
     {
-		$text = $this->_createLabel();
-		$this->_label = $text;
-		$this->_title = $text;
-		$this->_url = $this->getUrl('capitalism');
+		$this->initLinkProperties();
 		return parent::_toHtml();
     }
 
