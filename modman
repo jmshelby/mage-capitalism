@@ -1,1 +1,4 @@
-
+code									app/code/community/Aduroware/Capitalism
+layout/frontend/capitalism.xml			app/design/frontend/base/default/layout/capitalism.xml
+template/frontend/capitalism			app/design/frontend/base/default/template/capitalism
+Aduroware_Capitalism.xml				app/etc/modules/Aduroware_Capitalism.xml

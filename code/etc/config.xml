@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Aduroware_Capitalism>
+			<version>1.0.0</version>
+		</Aduroware_Capitalism>
+	</modules>
+
+	<global>
+		<helpers>
+			<capitalism>
+				<class>Aduroware_Capitalism_Helper</class>
+			</capitalism>
+		</helpers>
+		<blocks>
+			<capitalism>
+				<class>Aduroware_Capitalism_Block</class>
+			</capitalism>
+		</blocks>
+		<models>
+			<capitalism>
+				<class>Aduroware_Capitalism_Model</class>
+				<resourceModel>capitalism_resource</resourceModel>
+			</capitalism>
+			<capitalism_resource>
+				<class>Aduroware_Capitalism_Model_Resource</class>
+				<!-- <deprecatedNode>capitalism_mysql4</deprecatedNode> -->
+				<entities>
+					<player>
+						<table>aduroware_capitalism_player</table>
+					</player>
+					<player_transaction>
+						<table>aduroware_capitalism_player_transaction</table>
+					</player_transaction>
+				</entities>
+			</capitalism_resource>
+		</models>
+		<resources>
+			<aduroware_capitalism_setup>
+				<setup>
+					<module>Aduroware_Capitalism</module>
+				</setup>
+			</aduroware_capitalism_setup>
+		</resources>
+	</global>
+
+	<frontend>
+		<routers>
+			<capitalism>
+				<use>standard</use>
+				<args>
+					<module>Aduroware_Capitalism</module>
+					<frontName>capitalism</frontName>
+				</args>
+			</capitalism>
+		</routers>
+		<layout>
+			<updates>
+				<capitalism>
+					<file>capitalism.xml</file>
+				</capitalism>
+			</updates>
+		</layout>
+	</frontend>
+
+</config>

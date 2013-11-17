@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Aduroware_Capitalism>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Aduroware_User/>
+            </depends>
+        </Aduroware_Capitalism>
+    </modules>
+</config>

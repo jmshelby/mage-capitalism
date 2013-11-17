@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+	<default>
+		<reference name="top.links">
+			<block type="capitalism/links" name="capitalism_link" />
+			<action method="addLinkBlock"><blockName>capitalism_link</blockName></action>
+		</reference>
+	</default>
+
+	<user_account>
+		<reference name="user_account_navigation">
+			<action method="addLink">
+				<name>capitalism</name>
+				<path>capitalism</path>
+				<label>Capitalism Simulator</label>
+			</action>
+		</reference>
+	</user_account>
+
+	<capitalism_index_index>
+		<label>User My Account My Capitalism</label>
+		<update handle="user_account" />
+		<reference name="my.account.wrapper">
+
+			<block type="capitalism/user_account" name="user.capitalism" template="capitalism/account.phtml">
+				<action method="setTitle">
+					<title>My Capitalism Account</title>
+				</action>
+			</block>
+
+		</reference>
+	</capitalism_index_index>
+
+</layout>
