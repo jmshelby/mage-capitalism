@@ -20,28 +20,12 @@
 		<models>
 			<capitalism>
 				<class>Aduroware_Capitalism_Model</class>
-				<resourceModel>capitalism_resource</resourceModel>
+				<resourceModel>capitalism_mongo</resourceModel>
 			</capitalism>
-			<capitalism_resource>
-				<class>Aduroware_Capitalism_Model_Resource</class>
-				<!-- <deprecatedNode>capitalism_mysql4</deprecatedNode> -->
-				<entities>
-					<player>
-						<table>aduroware_capitalism_player</table>
-					</player>
-					<player_transaction>
-						<table>aduroware_capitalism_player_transaction</table>
-					</player_transaction>
-				</entities>
-			</capitalism_resource>
+			<capitalism_mongo>
+				<class>Aduroware_Capitalism_Model_Mongo</class>
+			</capitalism_mongo>
 		</models>
-		<resources>
-			<aduroware_capitalism_setup>
-				<setup>
-					<module>Aduroware_Capitalism</module>
-				</setup>
-			</aduroware_capitalism_setup>
-		</resources>
 	</global>
 
 	<frontend>

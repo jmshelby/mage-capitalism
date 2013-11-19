@@ -1,5 +1,5 @@
 <?php
-class Aduroware_Capitalism_Model_Player extends Mage_Core_Model_Abstract
+class Aduroware_Capitalism_Model_Player extends Cm_Mongo_Model_Abstract
 {
 
     protected function _construct()
@@ -35,10 +35,11 @@ class Aduroware_Capitalism_Model_Player extends Mage_Core_Model_Abstract
 
     protected function _beforeSave()
     {
-		if (!$this->getId())
-			$this->setCreatedDate(Mage::getSingleton('core/date')->gmtDate());
-		$this->setUpdatedDate(Mage::getSingleton('core/date')->gmtDate());
-		return parent::_beforeSave();
+
+		parent::_beforeSave();
+		$this->getDataSetDefault('points_current',0.0);
+		$this->getDataSetDefault('money_current',0.0);
+		return $this;
     }
 
 }

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema>
+	<capitalism>
+
+		<player>
+			<collection>aduroware_capitalism_player</collection>
+			<created_timestamp/>
+			<updated_timestamp/>
+			<fields>
+				<_id>
+					<type>MongoId</type>
+				</_id>
+				<user_id>
+					<type>int</type>
+				</user_id>
+				<username/>
+				<points_current>
+					<type>float</type>
+				</points_current>
+				<money_current>
+					<type>float</type>
+				</money_current>
+				<created_at>
+					<type>MongoDate</type>
+				</created_at>
+				<updated_at>
+					<type>MongoDate</type>
+				</updated_at>
+			</fields>
+		</player>
+
+		<player_transaction>
+			<collection>aduroware_capitalism_player_transaction</collection>
+			<created_timestamp/>
+			<fields>
+				<_id>
+					<type>MongoId</type>
+				</_id>
+				<giving_player_id>
+					<type>reference</type>
+					<model>capitalism/player</model>
+				</giving_player_id>
+				<receiving_player_id>
+					<type>reference</type>
+					<model>capitalism/player</model>
+				</receiving_player_id>
+				<points_given>
+					<type>float</type>
+				</points_given>
+				<money_received>
+					<type>float</type>
+				</money_received>
+				<created_at>
+					<type>MongoDate</type>
+				</created_at>
+			</fields>
+		</player_transaction>
+
+	</capitalism>
+</schema>
