@@ -20,6 +20,9 @@
 				<money_current>
 					<type>float</type>
 				</money_current>
+				<global_dividend_rate>
+					<type>float</type>
+				</global_dividend_rate>
 				<created_at>
 					<type>MongoDate</type>
 				</created_at>
@@ -56,5 +59,62 @@
 			</fields>
 		</player_transaction>
 
+
+
+
 	</capitalism>
+
+<!--
+
+Player
+    - Current Points
+    - Current Money
+    - User Name
+    - Global Dividend Rate
+    - User Id (external)
+    - Created Date
+
+
+Player Point Activity
+    * When Points are quired, not spent
+    - Player ID
+    - Points Aquired
+    - Activity Type (or id of activity; future use when we have mini game activitys)
+    - Created Date
+
+Player Pool Activity
+    * Track changes to pool numbers
+    - Player ID
+    - rate number before
+    - rate number after
+    ? Pool ID (when there are multiple pools)
+    - Created Date
+
+
+Player Transaction
+    * When Points are spent on another player
+    - Giving Player ID
+    - Receiving Player ID
+    - Points Spent
+    - Money Received (total, before dividend/pool payout)
+    ? Receiving Player, Points Before
+    ? Giving Player, Money Before
+    - Receiving Player, Pool Rate (at the time of transaction)
+    - Money sent to pool 
+    - Created Date
+
+Player Transaction Dividend
+    * When a transaction results in money directed to a pool, and players are payed out
+    - Transaction ID
+    - Receiving Player
+    - Money Received
+    - Player Rate (Receiving Player's Pool rate at the time of Payout)
+    - Dividend Rate (Calculated percentage of pool, dividend to single person represents)
+    ? Pool ID (when there are multiple pools)
+    - Created Date
+
+-->
+
+
 </schema>
+
