@@ -35,6 +35,11 @@
 					<model>capitalism/player_point_activity</model>
 				</point_activity>
 
+				<pool_activity>
+					<type>embeddedSet</type>
+					<model>capitalism/player_pool_activity</model>
+				</pool_activity>
+
 			</fields>
 		</player>
 
@@ -49,6 +54,21 @@
 				</activity_date>
 			</fields>
 		</player_point_activity>
+
+		<player_pool_activity>
+			<fields>
+				<!-- <pool_id></pool_id> -->
+				<rate_before>
+					<type>float</type>
+				</rate_before>
+				<rate_after>
+					<type>float</type>
+				</rate_after>
+				<activity_date>
+					<type>MongoDate</type>
+				</activity_date>
+			</fields>
+		</player_pool_activity>
 
 		<player_transaction>
 			<collection>aduroware_capitalism_player_transaction</collection>
