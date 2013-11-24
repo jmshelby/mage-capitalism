@@ -23,23 +23,22 @@
 				<global_dividend_rate>
 					<type>float</type>
 				</global_dividend_rate>
+
+				<point_activity>
+					<type>embeddedSet</type>
+					<model>capitalism/player_point_activity</model>
+				</point_activity>
+				<pool_activity>
+					<type>embeddedSet</type>
+					<model>capitalism/player_pool_activity</model>
+				</pool_activity>
+
 				<created_at>
 					<type>MongoDate</type>
 				</created_at>
 				<updated_at>
 					<type>MongoDate</type>
 				</updated_at>
-
-				<point_activity>
-					<type>embeddedSet</type>
-					<model>capitalism/player_point_activity</model>
-				</point_activity>
-
-				<pool_activity>
-					<type>embeddedSet</type>
-					<model>capitalism/player_pool_activity</model>
-				</pool_activity>
-
 			</fields>
 		</player>
 
@@ -77,27 +76,48 @@
 				<_id>
 					<type>MongoId</type>
 				</_id>
-				<giving_player_id>
+				<giving_player>
 					<type>reference</type>
 					<model>capitalism/player</model>
-				</giving_player_id>
-				<receiving_player_id>
+				</giving_player>
+				<receiving_player>
 					<type>reference</type>
 					<model>capitalism/player</model>
-				</receiving_player_id>
+				</receiving_player>
 				<points_given>
 					<type>float</type>
 				</points_given>
 				<money_received>
 					<type>float</type>
 				</money_received>
+				<dividends>
+					<type>embeddedSet</type>
+					<model>capitalism/player_transaction_dividend</model>
+				</dividends>
 				<created_at>
 					<type>MongoDate</type>
 				</created_at>
 			</fields>
 		</player_transaction>
 
-
+		<player_transaction_dividend>
+			<fields>
+				<!-- <pool_id></pool_id> -->
+				<receiving_player>
+					<type>reference</type>
+					<model>capitalism/player</model>
+				</receiving_player>
+				<money_received>
+					<type>float</type>
+				</money_received>
+				<receiving_player_rate>
+					<type>float</type>
+				</receiving_player_rate>
+				<dividend_rate>
+					<type>float</type>
+				</dividend_rate>
+			</fields>
+		</player_transaction_dividend>
 
 
 	</capitalism>
