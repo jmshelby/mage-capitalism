@@ -3,7 +3,19 @@
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
 
 
-<?php if ($this->isUserEnrolled()): ?>
+<?php if (!$this->isUserEnrolled()): ?>
+
+
+	<p>You are not enrolled, enter a username to get started.</p>
+
+	<br />
+
+	<form action="<?php echo $this->getUrl('capitalism/index/enroll') ?>" method="post">
+		<input type="text" name="new_username"/>
+		<input type="submit" value="Start"/>
+	</form>
+
+<?php else: ?>
 
 	<?php $player = $this->getPlayer(); ?>
 
@@ -16,16 +28,17 @@
 	<p>Current Money: <b><?php echo $player->getMoneyCurrent() ?></b></p>
 
 
-<?php else: ?>
-
-	<p>You are not enrolled, enter a username to get started.</p>
-
 	<br />
 
-	<form action="<?php echo $this->getUrl('capitalism/index/enroll') ?>" method="post">
-		<input type="text" name="new_username"/>
-		<input type="submit" value="Start"/>
+	<form action="<?php echo $this->getUrl('capitalism/player/addPoints') ?>" method="post">
+		<input type="submit" value="Get Another Point"/>
 	</form>
+
+
+
+
+
+
 
 
 <?php endif; ?>

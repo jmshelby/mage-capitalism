@@ -1,0 +1,5 @@
+<?php
+class Aduroware_Capitalism_Model_Mongo_Player_Point_Activity_Embedded extends Cm_Mongo_Model_Resource_Collection_Embedded
+{
+
+}

@@ -29,8 +29,26 @@
 				<updated_at>
 					<type>MongoDate</type>
 				</updated_at>
+
+				<point_activity>
+					<type>embeddedSet</type>
+					<model>capitalism/player_point_activity</model>
+				</point_activity>
+
 			</fields>
 		</player>
+
+		<player_point_activity>
+			<fields>
+				<points_aquired>
+					<type>float</type>
+				</points_aquired>
+				<activity_type/>
+				<activity_date>
+					<type>MongoDate</type>
+				</activity_date>
+			</fields>
+		</player_point_activity>
 
 		<player_transaction>
 			<collection>aduroware_capitalism_player_transaction</collection>

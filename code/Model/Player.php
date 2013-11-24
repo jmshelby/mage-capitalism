@@ -33,6 +33,26 @@ class Aduroware_Capitalism_Model_Player extends Cm_Mongo_Model_Abstract
 			return false;
 	}
 
+	public function aquirePoints($points,$activity = "N/A")
+	{
+		$currentPoints = $this->getPointsCurrent();
+		$this->setPointsCurrent($currentPoints + $points);
+
+		$pointActivity = Mage::getModel('capitalism/player_point_activity');
+		$pointActivity->setPointsAquired($points);
+		$pointActivity->setActivityType($activity);
+		$pointActivity->setActivityDate(new MongoDate());
+
+		$this->getPointActivity()->addItem($pointActivity);
+
+		$this->save();
+	}
+
+	public function getPointActivity()
+	{
+		return $this->_getEmbeddedCollection('point_activity');
+	}
+
     protected function _beforeSave()
     {
 
