@@ -14,4 +14,10 @@ class Aduroware_Capitalism_AccountController extends Aduroware_Capitalism_Contro
 		$this->renderLayout();
 	}
 
+	public function editAction()
+	{
+		$this->loadLayout();
+		$this->renderLayout();
+	}
+
 }

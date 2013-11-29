@@ -83,6 +83,19 @@
 		</reference>
 	</capitalism_account_edit>
 
+	<capitalism_account_hearts_index>
+		<update handle="_cap_player_account" />
+		<reference name="capitalism.account.wrapper">
+			<block type="capitalism/account_hearts_main" name="account.hearts.main" as="hearts" template="capitalism/account/hearts/main.phtml"/>
+		</reference>
+	</capitalism_account_hearts_index>
+
+	<capitalism_account_money_index>
+		<update handle="_cap_player_account" />
+		<reference name="capitalism.account.wrapper">
+			<block type="capitalism/account_money_main" name="account.money.main" as="money" template="capitalism/account/money/main.phtml"/>
+		</reference>
+	</capitalism_account_money_index>
 
 
 <!--
