@@ -1,20 +1,5 @@
 <?php
-class Aduroware_Capitalism_Block_User_Account extends Mage_Core_Block_Template
+class Aduroware_Capitalism_Block_User_Account extends Aduroware_Capitalism_Block_Player_Abstract
 {
-
-	public function getPlayer()
-	{
-		$hlp = Mage::helper('capitalism');
-		$player = $hlp->getCurrentPlayer();
-		return $player;
-	}
-
-	public function isUserEnrolled()
-	{
-		if ($this->getPlayer())
-			return true;
-		else
-			return false;
-	}
 
 }

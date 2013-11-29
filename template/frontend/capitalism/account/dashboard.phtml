@@ -1,0 +1,29 @@
+
+
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+
+
+<?php $player = $this->getPlayer(); ?>
+
+<h4>Welcome <?php echo $player->getUsername() ?>!</h4>
+
+<br />
+<br />
+
+<p>Current Hearts: <b><?php echo $player->getPointsCurrent() ?></b></p>
+<p>Current Money: <b><?php echo $player->getMoneyCurrent() ?></b></p>
+
+<?php /*
+
+<br />
+
+<form action="<?php echo $this->getUrl('capitalism/player/addPoints') ?>" method="post">
+	<input type="submit" value="Get Another Point"/>
+</form>
+
+*/ ?>
+
+
+
+
+

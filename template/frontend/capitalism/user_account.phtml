@@ -27,19 +27,7 @@
 	<p>Current Hearts: <b><?php echo $player->getPointsCurrent() ?></b></p>
 	<p>Current Money: <b><?php echo $player->getMoneyCurrent() ?></b></p>
 
-
-	<br />
-
-	<form action="<?php echo $this->getUrl('capitalism/player/addPoints') ?>" method="post">
-		<input type="submit" value="Get Another Point"/>
-	</form>
-
-
-
-
-
-
-
+	<a href="<?php echo $this->getUrl('capitalism/account/dashboard'); ?>">Go to Dashboard!</a>
 
 <?php endif; ?>
 
