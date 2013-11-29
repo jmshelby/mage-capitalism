@@ -15,13 +15,13 @@ class Aduroware_Capitalism_Account_HeartsController extends Aduroware_Capitalism
 		if ($player = $hlp->getCurrentPlayer()) {
 			//if ($player->aquirePoints(5))
 			if ($player->aquirePoints(1,'ACTIVITY-CLICK'))
-				$session->addSuccess("Account created!");
+				$session->addSuccess("One Heart Added!");
 			else
-				$session->addError("Problem when adding point.");
+				$session->addError("Problem when adding heart.");
 		} else {
 			$session->addError("Sorry, you don't seem to have an account.");
 		}
-		$this->_redirect('*/index/');
+		$this->_redirect('*/*/index');
 	}
 
 }
