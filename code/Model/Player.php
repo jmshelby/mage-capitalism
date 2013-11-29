@@ -46,6 +46,7 @@ class Aduroware_Capitalism_Model_Player extends Cm_Mongo_Model_Abstract
 		$this->getPointActivity()->addItem($pointActivity);
 
 		$this->save();
+		return true;
 	}
 
 	public function getPointActivity()

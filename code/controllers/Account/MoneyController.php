@@ -5,6 +5,7 @@ class Aduroware_Capitalism_Account_MoneyController extends Aduroware_Capitalism_
 	public function indexAction()
 	{
 		$this->loadLayout();
+		$this->_initLayoutMessages('user/session');
 		$this->renderLayout();
 	}
 

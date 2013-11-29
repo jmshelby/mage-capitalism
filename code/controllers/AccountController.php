@@ -5,18 +5,21 @@ class Aduroware_Capitalism_AccountController extends Aduroware_Capitalism_Contro
 	public function indexAction()
 	{
 		$this->loadLayout();
+		$this->_initLayoutMessages('user/session');
 		$this->renderLayout();
 	}
 
 	public function dashboardAction()
 	{
 		$this->loadLayout();
+		$this->_initLayoutMessages('user/session');
 		$this->renderLayout();
 	}
 
 	public function editAction()
 	{
 		$this->loadLayout();
+		$this->_initLayoutMessages('user/session');
 		$this->renderLayout();
 	}
 

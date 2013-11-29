@@ -5,6 +5,7 @@ class Aduroware_Capitalism_User_AccountController extends Aduroware_Capitalism_C
 	public function indexAction($coreRoute = null)
 	{
 		$this->loadLayout();
+		$this->_initLayoutMessages('user/session');
 		$this->renderLayout();
 	}
 

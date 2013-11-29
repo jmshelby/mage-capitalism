@@ -5,6 +5,7 @@ class Aduroware_Capitalism_Account_HeartsController extends Aduroware_Capitalism
 	public function indexAction()
 	{
 		$this->loadLayout();
+		$this->_initLayoutMessages('user/session');
 		$this->renderLayout();
 	}
 
