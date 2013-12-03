@@ -61,8 +61,8 @@
 
                 <action method="addLink"><name>account_dashboard</name><path>capitalism/account/dashboard</path><label>Account Dashboard</label></action>
                 <action method="addLink"><name>account_edit</name><path>capitalism/account/edit/</path><label>Account Edit</label></action>
-                <action method="addLink"><name>Hearts</name><path>capitalism/account_hearts/index</path><label>Hearts</label></action>
                 <action method="addLink"><name>Money</name><path>capitalism/account_money/index</path><label>Money</label></action>
+                <action method="addLink"><name>Hearts</name><path>capitalism/account_hearts/index</path><label>Hearts</label></action>
 
             </block>
         </reference>
@@ -86,7 +86,9 @@
 	<capitalism_account_hearts_index>
 		<update handle="_cap_player_account" />
 		<reference name="capitalism.account.wrapper">
-			<block type="capitalism/account_hearts_main" name="account.hearts.main" as="hearts" template="capitalism/account/hearts/main.phtml"/>
+			<block type="capitalism/account_hearts_main" name="account.hearts.main" as="hearts" template="capitalism/account/hearts/main.phtml">
+				<block type="capitalism/account_hearts_users" name="account.hearts.users" as="hearts.users" template="capitalism/account/hearts/users.phtml"/>
+			</block>
 		</reference>
 	</capitalism_account_hearts_index>
 
